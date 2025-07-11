@@ -16,8 +16,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- fonts -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'><!-- //fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- //fonts -->
 
 	<!-- start-smoth-scrolling -->
 		<script type="text/javascript" src="js/move-top.js"></script>
@@ -87,11 +89,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-top">
 	<div class="container">
 		<ul>
-			<li><a class="scroll" href="#about"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>Resumen</a></li>
-			<li><a class="scroll" href="#emailme"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Email me</a></li>
-			<li><a href="javascript:window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Print CV</a></li>
-			<li><a href="#portfolioModal9" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
-				<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>My Photo</a></li>
+			<li><a class="scroll" href="#about"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>Sobre mí</a></li>
+			<li><a class="scroll" href="#experience"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Experiencia</a></li>
+			<li><a class="scroll" href="#skills"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Habilidades</a></li>
+			<li><a class="scroll" href="#projects"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>Proyectos</a></li>
+			<li><a class="scroll" href="#emailme"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contacto</a></li>
+			<li><a href="javascript:window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Imprimir CV</a></li>
+			<!-- Eliminado el enlace a My Photo Modal ya que no se usa -->
 		</ul>
 	</div>
 </div>	
@@ -99,24 +103,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="col-md-8 header-left">
 			<div class="col-sm-5 pro-pic">
-				<img class="img-responsive" src="images/perfil.jpg" alt=" "/>
+				<img class="img-responsive" src="images/perfil.jpg" alt="Foto de Eric Zubin Vega Rodríguez"/>
 			</div>
-			<div class="col-sm-5 pro-text">
-				<h1>Eric Zubin Vega Rodriguez</h1>
-				<p>Programador</p>
+			<div class="col-sm-7 pro-text"> <!-- Ajustado col-sm-5 a col-sm-7 para dar más espacio al texto -->
+				<h1>Eric Zubin Vega Rodríguez</h1>
+				<p>Desarrollador Full-Stack y entusiasta de la eficiencia</p>
+				<p class="tagline">“Laravel, Ionic Angular y AWS al servicio de soluciones escalables”</p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="col-md-4 header-right ">
 			<ul class="list-left">
 				<li>Email:</li>
-				<li>Phone no:</li>
-				<li>Address: </li>
+				<li>Teléfono:</li> <!-- Cambiado Phone no a Teléfono -->
+				<li>Ubicación: </li> <!-- Cambiado Address a Ubicación -->
 			</ul>
 			<ul class="list-right">
 				<li><a href="mailto:eric.zubin@gmail.com">eric.zubin@gmail.com</a></li>
 				<li>4421371437</li>
-				<li> 1234k Avenue, 4th block, Newyork City.</li>
+				<li>Ciudad de México</li> <!-- Actualizada la dirección aquí también -->
 			</ul>
 			<div class="clearfix"></div>
 		</div>
@@ -125,311 +130,141 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //banner -->
 <!-- about -->
-<div id="about" class="about">
+<div id="about" class="about"> <!-- ID "about" ya existe, correcto -->
 	<div class="container">
-		<h3 class="tittle">Sobre mi</h3>
-		<p class="abt-para">Soy una persona la cual le gusta aprender mas sobre las tecnogias, ya que pienso que la tecnologia es la herramienta mas poderosa que tenemos nosotros como humanos.
-			Mi especialidad y lo que me gustan mas son las tecnologias que tienen que ver con las aplicaciones moviles y aplicaciones web, ya que en esta era debemos y estamos mas conectados unos con otros </p>
-	</div>
-	<div class="col-md-6 abt-left ">
-		<h2>Education</h2>
-				<div class="accordion">
-							<div class="accordion-section">
-								<h5><a class="accordion-section-title" href="#accordion-1">
-									<span>2013 - Actualidad</span> Ingieneria en Software
-								<i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>
-								</a></h5>
-								<div id="accordion-1" class="accordion-section-content">
-									<h6>Certificados</h6>
-									<ul>
-										<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Microsoft Technology Associate: Software Development Fundamentals </a></li>
-									</ul>
-								    <h6>Cursos de capacitación</h6>
-									<ul>
-										<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Taller de Android básico  </a></li>
-						                <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Taller de MySq, PHP y Jompla </a></li>
-										<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Curso de – Java Web Services </a></li>
-										<li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">Diplomado 11g Oracle </a></li>
-
-									</ul>
-								</div>
-							</div>
-
-					
-							
-							
-				</div>
-				<script>
-							jQuery(document).ready(function() {
-								function close_accordion_section() {
-									jQuery('.accordion .accordion-section-title').removeClass('active');
-									jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-								}
-
-								jQuery('.accordion-section-title').click(function(e) {
-									// Grab current anchor value
-									var currentAttrValue = jQuery(this).attr('href');
-
-									if(jQuery(e.target).is('.active')) {
-										close_accordion_section();
-									}else {
-										close_accordion_section();
-
-										// Add active class to section title
-										jQuery(this).addClass('active');
-										// Open up the hidden content panel
-										jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
-									}
-
-									e.preventDefault();
-								});
-							});
-				</script>
-	</div>
-	<div class="col-md-6 abt-right ">
-		<div class="col-sm-4 abt-gd-left text-center">
-			<div id="demo-pie-1" class="pie-title-center" data-percent="40"> <span class="pie-value"></span> </div>
-			<h4>Android</h4>
+		<h3 class="tittle">Sobre mí</h3>
+		<div class="row">
+			<div class="col-md-12 abt-para" style="text-align: left;">
+				<p><strong>Ubicación:</strong> Ciudad de México 🇲🇽</p>
+				<p><strong>Estilo:</strong> Prefiero trabajar de forma individual, afinando cada detalle.</p>
+				<p><strong>Enfoque:</strong></p>
+				<ul>
+					<li>Backend con Laravel y MySQL</li>
+					<li>Apps híbridas con Ionic Angular + Capacitor</li>
+				</ul>
+				<p><strong>Idiomas:</strong> Español nativo, inglés práctico.</p>
+			</div>
 		</div>
-		
-		<div class="col-sm-4 abt-gd-left text-center">		   
-			<div id="demo-pie-3" class="pie-title-center" data-percent="80"> <span class="pie-value"></span> </div>
-			<h4>Aplicaciones WEB</h4>
-		</div>
-		<div class="col-sm-4 abt-gd-left text-center">		   
-			<div id="demo-pie-4" class="pie-title-center" data-percent="70"> <span class="pie-value"></span> </div>
-			<h4>Servicios WEB</h4>
-		</div>
-		<div class="clearfix"></div>
 	</div>
+	<!-- La sección de education y las gráficas de pie se eliminan según el plan -->
 	<div class="clearfix"></div>
 </div>
 <!-- about -->
-<!-- education -->
-<div class="employment">
+<!-- Experiencia Profesional -->
+<div id="experience" class="employment"> <!-- Añadido ID para navegación -->
 	<div class="container">
-		<h3 class="tittle ">Work Experience</h3>
-		<p class="abt-para ">Los diferentes puestos a travez de los años . </p>
-		<div class="col-md-6 employ-left">
-			<h4>01</h4>
+		<h3 class="tittle">Experiencia Profesional</h3>
+		<div class="col-md-12 experience-entry">
+			<h4>Amiqro</h4>
+			<ul>
+				<li>Configuración de servidores Linux y Nginx para amiqro.net</li>
+				<li>Ajuste de cabeceras de seguridad (X-Frame-Options, CSP) y SSL</li>
+				<li>Embebido de contenido vía iframe y optimización de performance</li>
+			</ul>
 		</div>
-		<div class="col-md-6 employ-right">
-			<h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Programador</h5>
-			<p> Como programador eh estado desarrollando aplicaciones Nativas de Android, y desarrollado aplicaciones WEB usando las tecnologias PHP(eh usando framework Laravel),Angular y Dango</p>
-		</div>
-		<!-- education 
-		<div class="col-md-6 employ-left2">
-			<h5>UI/UX Designer<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></h5>
-			<p>voluptatem accusantium doloremque laudantium, totam 
-		rem aperiam, eaque ipsa quae ab illo inventore veritatis </p>
-		</div>
-		<div class="col-md-6 employ-right2">
-			<h4>02</h4>
-		</div>
-		-->
 		<div class="clearfix"></div>
 	</div>
 </div>
-<!-- education -->
+<!-- //Experiencia Profesional -->
 
-<!-- portfolio -->
-<div class="portfolio">
+<!-- Proyectos Destacados -->
+<div id="projects" class="portfolio projects-section"> <!-- Añadido ID para navegación -->
 	<div class="container">
-		<h3 class="tittle ">Portfolio</h3>
-			<div class="portfolio-grids">
-				<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-				<script type="text/javascript">
-									$(document).ready(function () {
-										$('#horizontalTab').easyResponsiveTabs({
-											type: 'default', //Types: default, vertical, accordion           
-											width: 'auto', //auto or any width like 600px
-											fit: true   // 100% fit in a container
-										});
-									});
-									
-				</script>
-				<div class="sap_tabs">
-					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-						<ul class="resp-tabs-list">
-							<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Todos</span></li> 
-							<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Aplicaciones Android</span></li> 
-							<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Paginas WEB</span></li> 
-						</ul>				  	 
-						<div class="resp-tabs-container">
-							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-								<div class="col-md-3 team-gd ">
-									<div class="thumb">
-										<a href="#portfolioModal1" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic10.jpg" alt="">
-										<div class="team_pos">
-											<ul>
-												<li>
-													<div class="morph pic fb_icon1">
-													</div>
-												</li>
-											</ul>
-										</div>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-								<div class="col-md-3 team-gd ">
-									<div class="thumb">
-										<a href="#portfolioModal1" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic9.jpg" alt="">
-										<div class="team_pos">
-											<ul>
-												<li>
-													<div class="morph pic fb_icon1">
-													</div>
-												</li>
-											</ul>
-										</div>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-					</div>
+		<h3 class="tittle">Proyectos Destacados</h3>
+		<div class="row project-list">
+			<!-- Proyecto 1: Quinielas Win -->
+			<div class="col-md-4 project-item">
+				<div class="project-content">
+					<h4>Quinielas Win</h4>
+					<p class="project-description">Sistema de apuestas con QR, SMS y pagos internacionales (OpenPay).</p>
+					<p class="project-stack"><strong>Stack:</strong> Ionic Angular, Laravel, Twilio</p>
 				</div>
 			</div>
-	</div>
-</div>
-<!-- //portfolio -->
-<!-- more skills -->
-<div class="more">
-	<div class="container">
-		<h3 class="tittle ">Skills</h3>
-		<div class="col-md-6 skill-left ">
-			<div class="progress">
-				  <div class="progress-bar progress-bar-success" style="width: 30%">Android
-					<span class="sr-only">50% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar progress-bar-warning " style="width: 20%">
-					<span class="sr-only"></span>
-				  </div>
-				  <p>50%</p>
-				  <div class="clearfix"></div>
-			</div>
-			<div class="progress">
-				  <div class="progress-bar progress-bar-success1" style="width: 30%">PHP
-					<span class="sr-only">70% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar progress-bar-warning1" style="width: 40%">
-					<span class="sr-only"></span>
-				  </div>
-				  <p>70%</p>
-				  <div class="clearfix"></div>
-			</div>
-			<div class="progress">
-				  <div class="progress-bar progress-bar-success3" style="width: 30%">SQL
-					<span class="sr-only">70% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar progress-bar-warning3 " style="width: 55%">
-					<span class="sr-only"></span>
-				  </div>
-				  <p>85%</p>
-				  <div class="clearfix"></div>
-			</div>
-			<div class="progress">
-				  <div class="progress-bar progress-bar-success2" style="width: 30%">HTML
-					<span class="sr-only">80% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar progress-bar-warning2" style="width: 50%">
-					<span class="sr-only"></span>
-				  </div>
-				  <p>80%</p>
-				  <div class="clearfix"></div>
-			</div>
-			
-			<div class="progress ">
-				  <div class="progress-bar progress-bar-success4" style="width: 30%">Javascript
-					<span class="sr-only">60% Complete (success)</span>
-				  </div>
-				  <div class="progress-bar progress-bar-warning4" style="width: 40%">
-					<span class="sr-only"></span>
-				  </div>
-				  <p>70%</p>
-				  <div class="clearfix"></div>
-			</div>
-			<div class="progress ">
-				<div class="progress-bar progress-bar-success3" style="width: 30%">Laravel
-				  <span class="sr-only">70% Complete (success)</span>
+			<!-- Proyecto 2: App Hikvision -->
+			<div class="col-md-4 project-item">
+				<div class="project-content">
+					<h4>App Hikvision</h4>
+					<p class="project-description">Cliente Android para videoporteros IP vía RTSP.</p>
+					<p class="project-stack"><strong>Stack:</strong> Kotlin, ExoPlayer</p>
 				</div>
-				<div class="progress-bar progress-bar-warning3 " style="width: 40%">
-				  <span class="sr-only"></span>
-				</div>
-				<p>70%</p>
-				<div class="clearfix"></div>
-		  </div>
-
-
-			<div class="progress ">
-				<div class="progress-bar progress-bar-success1" style="width: 30%">Angular
-				  <span class="sr-only">10% Complete (success)</span>
-				</div>
-				<div class="progress-bar progress-bar-warning1" style="width: 20%">
-				  <span class="sr-only"></span>
-				</div>
-				<p>50%</p>
-				<div class="clearfix"></div>
-		  </div>
-
-		  <div class="progress no-marg">
-			<div class="progress-bar progress-bar-success" style="width: 20%">Ionic
-			  <span class="sr-only">50% Complete (success)</span>
 			</div>
-			<div class="progress-bar progress-bar-warning " style="width: 0%">
-			  <span class="sr-only"></span>
+			<!-- Proyecto 3: Eventos Laravel -->
+			<div class="col-md-4 project-item">
+				<div class="project-content">
+					<h4>Eventos Laravel</h4>
+					<p class="project-description">Plataforma de ticketing con roles y pagos flexibles.</p>
+					<p class="project-stack"><strong>Stack:</strong> Laravel, MySQL, Amazon RDS</p>
+				</div>
 			</div>
-			<p>20%</p>
-			<div class="clearfix"></div>
-	  </div>
-
-			
-		  
-
 		</div>
-		<div class="col-md-6 skill-right ">
-			<div class="scrollbar scrollbar1">
-				<div class="more-gds">
-					<div class="col-sm-3 more-left">
-						<span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
-					</div>
-					<div class="col-sm-9 more-right">
-						<h4>Paginas WEB</h4>
-						<p>Ya e realizado plataformas completas con laravel y estoy en el proceso de aprendisaje del  stack MEAN</p>
-					</div>
-					<div class="clearfix"></div>
+		<div class="row project-list">
+			<!-- Proyecto 4: Impresión RFID ZT411 -->
+			<div class="col-md-4 project-item">
+				<div class="project-content">
+					<h4>Impresión RFID ZT411</h4>
+					<p class="project-description">Scripts ZPL para encoding y calibración de tags.</p>
+					<p class="project-stack"><strong>Stack:</strong> ZPL, Zebra SDK</p>
 				</div>
-				<div class="more-gds yes_marg">
-					<div class="col-sm-9 more-right2">
-						<h4>Aplicaciones Moviles</h4>
-						<p> Eh realizado aplicaciones Nativas para la plataforma Android. Y eh estado a empezar a trabajar con el Framework de NativeScript </p>
-					</div>
-					<div class="col-sm-3 more-left">
-						<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-					</div>
-					<div class="clearfix"></div>
+			</div>
+			<!-- Proyecto 5: Amiqro -->
+			<div class="col-md-4 project-item">
+				<div class="project-content">
+					<h4>Amiqro</h4>
+					<p class="project-description">Soporte de infraestructura, Nginx, seguridad web y optimización para amiqro.net.</p>
+					<p class="project-stack"><strong>Stack:</strong> Linux, Nginx, Security Headers</p>
 				</div>
-				<div class="more-gds yes_marg">
-					<div class="col-sm-3 more-left">
-						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-					</div>
-					<div class="col-sm-9 more-right">
-						<h4>Servicios WEB</h4>
-						<p>Los servicios WEB para las aplicaciones que eh realizados la eh codificado en PHP, las eh testeado.</p>
-						<p>Se consumir servicios WEB en NodeJ y comprendo como es la estrucutra y realizar un cambio en un servicio que se requiera .</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
+			</div>
+			<!-- Placeholder para mantener el diseño si son 5 proyectos -->
+			<div class="col-md-4 project-item-placeholder">
 			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
-<!-- more skills -->
+<!-- //Proyectos Destacados -->
+<!-- Habilidades y Tecnologías -->
+<div id="skills" class="more skills-section"> <!-- Añadido ID para navegación -->
+	<div class="container">
+		<h3 class="tittle">Habilidades y Tecnologías</h3>
+		<div class="row">
+			<div class="col-md-6 skills-col">
+				<h4>Lenguajes</h4>
+				<ul>
+					<li>PHP</li>
+					<li>JavaScript/TypeScript</li>
+					<li>Kotlin</li>
+				</ul>
+
+				<h4>Frameworks / Librerías</h4>
+				<h5>Backend:</h5>
+				<ul>
+					<li>Laravel</li>
+					<li>Composer</li>
+				</ul>
+				<h5>Frontend móvil:</h5>
+				<ul>
+					<li>Ionic Angular (+ Capacitor)</li>
+				</ul>
+			</div>
+			<div class="col-md-6 skills-col">
+				<h4>Infraestructura</h4>
+				<ul>
+					<li>AWS (RDS, EC2)</li>
+					<li>Docker</li>
+					<li>CI/CD (GitHub Actions)</li>
+				</ul>
+
+				<h4>Especialidades</h4>
+				<ul>
+					<li>ZPL y Zebra ZT411 (impresión y RFID)</li>
+					<li>RTSP para Hikvision</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //Habilidades y Tecnologías -->
 <!-- contact -->
 <div id="emailme" class="contact">
 	<div class="container">
@@ -443,7 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="tab-pane active in" id="tab1">
 						<div class="contact-form">
 							<ul>
-								<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>Newyork City.</span></li>
+								<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><span>Ciudad de México</span></li>
 								<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:eric.zubin@gmail.com">eric.zubin@gmail.com</a></li>
 								<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>4421371437</li>
 							</ul>
@@ -465,7 +300,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
 		</div>
 		<div class="col-md-6 contact-right ">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819" frameborder="0" style="border:0"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240827.19000980142!2d-99.28094397801905!3d19.39067996549292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee342!2sMexico%20City%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2sus!4v1700592836130!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -474,158 +309,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
-<div class="portfolio-modal modal fade slideanim" id="portafolio1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>Visitmedic</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Este sistema fue realizado en el Framework LARAVEL, en este proyecto se trabajo de que se pueideran comunicar el cliente y el doctor en un sistema de markplace</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="portfolio-modal modal fade slideanim" id="portafolio2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>SISTEMA ZANNO</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Es un sistema para distribuir cursos en lo que los profesores puedan subir su propio material</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Eliminados los modales de portafolio (portafolio1 a portafolio8) ya que no se usan con el nuevo diseño de proyectos -->
 
-<div class="portfolio-modal modal fade slideanim" id="portafolio3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>SISTEMA MAERIK</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>La pagina facilitara la creaccion de cotizadores,simuladores, y corridas financieras para los vendedores haciendo que la administracion los pueda monitorear.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="portfolio-modal modal fade slideanim" id="portafolio4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>DEMO TECHCOPS</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Se investigo y se hizo una investigacion sobre la tecnologia RFID. LOS engregables fueron una aplicacion C# para capturas las () y mostraslas en un monitor</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="portfolio-modal modal fade slideanim" id="portafolio6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>APP DEMO TECHCOPS</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Se hizo una app para leer las etiquetas RFID y que se mostrasen en un monitor.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="portfolio-modal modal fade slideanim" id="portafolio7" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>APP AMIQRO</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Es una APP donde se muestra una lista de notificaciones ne las que la administracion puede comunicar a sus afiliados de proyectos que tengan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="portfolio-modal modal fade slideanim" id="portafolio8" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content port-modal">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-			<div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div class="modal-body">
-						<h3>GESTION DE MODULOS Y OTROS MODULOS AMIQRO</h3>
-                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
-                        <p>Se agrego otros modulos al sistema AMIQRO con distinto servicios.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 	<!--scrolling js-->
 	<script src="js/jquery.nicescroll.js"></script>
 	<script src="js/scripts.js"></script>
