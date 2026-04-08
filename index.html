@@ -1,499 +1,554 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Resumen Personal</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Resume Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- //js -->
-<!-- fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- //fonts -->
-
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-
-<!-- skills -->
-<script src="js/pie-chart.js" type="text/javascript"></script>
- <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#demo-pie-1').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Zubin Vega Rodríguez - CV</title>
+    <meta name="description" content="Desarrollador Full-Stack - Laravel, Ionic, AWS">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#1e40af',
+                        accent: '#f97316',
+                        'accent-light': '#fb923c',
+                        background: '#f8fafc',
+                        card: '#ffffff',
+                        border: '#e2e8f0',
+                        text: '#334155',
+                        muted: '#64748b'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Poppins', 'Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
                 }
-            });
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+        
+        /* Animations */
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        
+        /* Gradient text */
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        /* Nav underline animation */
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px; background: #f97316; transition: all 0.3s ease; transform: translateX(-50%); }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #f97316; }
+    </style>
+</head>
+<body class="bg-background text-text">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 border-b-4 border-accent">
+        <div class="max-w-6xl mx-auto px-4">
+            <ul class="flex justify-center flex-wrap">
+                <li><a href="#about" class="nav-link inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">📄 Sobre mí</a></li>
+                <li><a href="#experience" class="nav-link inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">💼 Experiencia</a></li>
+                <li><a href="#skills" class="nav-link inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">⚙️ Habilidades</a></li>
+                <li><a href="#projects" class="nav-link inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">📁 Proyectos</a></li>
+                <li><a href="#contact" class="nav-link inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">✉️ Contacto</a></li>
+                <li><a href="javascript:window.print()" class="inline-block px-6 py-4 text-primary font-medium text-sm hover:bg-orange-50 transition-all">🖨️ Imprimir</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            $('#demo-pie-2').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
+    <!-- Header / Banner -->
+    <header class="bg-gradient-to-br from-primary to-secondary pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-60 h-60 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- Profile Picture -->
+                <div class="w-40 h-40 flex-shrink-0">
+                    <img src="images/perfil.jpg" alt="Eric Zubin" class="w-full h-full object-cover rounded-full border-4 border-white/30 shadow-2xl">
+                </div>
+                <!-- Profile Info -->
+                <div class="text-center md:text-left flex-1">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white font-serif mb-3 drop-shadow-lg">Eric Zubin Vega Rodríguez</h1>
+                    <p class="text-xl text-white/90 mb-2">Desarrollador Full-Stack y entusiasta de la eficiencia</p>
+                    <p class="text-lg text-accent-light italic">"Laravel, Ionic Angular y AWS al servicio de soluciones escalables"</p>
+                </div>
+            </div>
+            <!-- Contact Info Box -->
+            <div class="mt-10 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div class="flex flex-wrap justify-center md:justify-start gap-6 text-white">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">📧</span>
+                        <a href="mailto:eric.zubin@gmail.com" class="hover:text-accent-light transition-colors">eric.zubin@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">📍</span>
+                        <span>Ciudad de México, MX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            $('#demo-pie-3').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-			
-			$('#demo-pie-4').pieChart({
-                barColor: '#10A7AF',
-                trackColor: '#fff',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-background">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary font-serif text-center mb-12 uppercase tracking-wider relative">
+                Sobre mí
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4 rounded"></span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Intro -->
+                <div class="text-center mb-12 fade-in">
+                    <p class="text-lg leading-relaxed text-text">Desarrollador Full-Stack apasionado por crear soluciones tecnológicas eficientes y escalables. Especializado en el ecosistema PHP/Laravel para backend y aplicaciones híbridas con Ionic Angular para movilidad empresarial.</p>
+                </div>
+                
+                <!-- Info Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white rounded-xl p-6 shadow-md border border-border hover:border-accent transition-all hover-lift">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl mb-4 mx-auto">📍</div>
+                        <h3 class="font-semibold text-primary text-center mb-2">Ubicación</h3>
+                        <p class="text-muted text-center">Ciudad de México, México 🇲🇽</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md border border-border hover:border-accent transition-all hover-lift">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl mb-4 mx-auto">💼</div>
+                        <h3 class="font-semibold text-primary text-center mb-2">Modalidad</h3>
+                        <p class="text-muted text-center">Trabajo individual, atención al detalle</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md border border-border hover:border-accent transition-all hover-lift">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl mb-4 mx-auto">🌐</div>
+                        <h3 class="font-semibold text-primary text-center mb-2">Idiomas</h3>
+                        <p class="text-muted text-center">Español nativo · Inglés práctico</p>
+                    </div>
+                </div>
+                
+                <!-- Focus Tags -->
+                <div class="bg-white rounded-xl p-8 shadow-md border border-border text-center">
+                    <h3 class="font-serif text-xl text-primary mb-6">Enfoque Técnico</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="px-5 py-2 bg-primary text-white rounded-lg font-medium text-sm">Backend Laravel + MySQL</span>
+                        <span class="px-5 py-2 bg-primary text-white rounded-lg font-medium text-sm">Apps Ionic Angular + Capacitor</span>
+                        <span class="px-5 py-2 bg-primary text-white rounded-lg font-medium text-sm">Infraestructura AWS</span>
+                        <span class="px-5 py-2 bg-primary text-white rounded-lg font-medium text-sm">Integraciones SMS/Pagos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-card">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary font-serif text-center mb-12 uppercase tracking-wider relative">
+                Experiencia Profesional
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4 rounded"></span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative pl-8 border-l-4 border-gradient-to-b from-primary to-accent">
+                    <!-- Timeline Item -->
+                    <div class="mb-10 relative">
+                        <div class="absolute -left-[44px] top-0 w-8 h-8 bg-accent rounded-full border-4 border-card shadow-lg flex items-center justify-center">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-xl p-8 shadow-lg hover-lift">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-primary font-serif">Amiqro</h3>
+                                <span class="inline-block px-4 py-1 bg-primary text-white rounded-lg text-sm font-semibold mt-2 md:mt-0">2022 - Presente</span>
+                            </div>
+                            <p class="text-accent font-semibold text-lg mb-4">Desarrollador Full-Stack & DevOps</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Desarrollo de <strong class="text-accent">aplicaciones web</strong> con Laravel, Vue 3 y Vuetify para gestión empresarial</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Desarrollo de <strong class="text-accent">apps híbridas</strong> con Ionic Angular y Capacitor para iOS y Android</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Configuración y administración de servidores <strong class="text-accent">Linux</strong> con <strong class="text-accent">Nginx</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Implementación de cabeceras de seguridad (<strong class="text-accent">X-Frame-Options</strong>, <strong class="text-accent">CSP</strong>, <strong class="text-accent">HSTS</strong>) y certificados <strong class="text-accent">SSL</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Gestión de infraestructura en <strong class="text-accent">AWS</strong> (EC2, RDS, S3)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Despliegue y mantenimiento de aplicaciones con <strong class="text-accent">Docker</strong> y <strong class="text-accent">GitHub Actions</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Integraciones con APIs: <strong class="text-accent">Twilio</strong> (SMS), <strong class="text-accent">OpenPay</strong> (pagos), <strong class="text-accent">OpenRouter</strong> (IA)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold">✓</span>
+                                    <span>Desarrollo de scripts <strong class="text-accent">ZPL</strong> para impresoras <strong class="text-accent">Zebra ZT411</strong> (RFID)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-background">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary font-serif text-center mb-12 uppercase tracking-wider relative">
+                Proyectos Destacados
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4 rounded"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Club de Industriales -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">🏛️</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Club de Industriales</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Plataforma Vue 3 + Vuetify para gestión de club empresarial con dashboard avanzado, gráficos y gestión de usuarios.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vue 3</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vuetify 3</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vite</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Pinia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Quinielas Win -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">🎰</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Quinielas Win</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Sistema de apuestas deportivas con generación de QR, envío de SMS con Twilio y pagos internacionales mediante OpenPay.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Laravel</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Ionic</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Twilio</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">OpenPay</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: 101 Eventos -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">🎫</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">101 Eventos</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Plataforma de ticketing con sistema de roles (admin/usuario), generación de QR y gestión de empresas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Laravel</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vuexy</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Black ID Link -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">🤖</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Black ID Link</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Plataforma web con IA para ingestion de productos y catálogos. Usa OpenRouter API para procesamiento de documentos.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Laravel</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vuexy</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">OpenRouter AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Almacen -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">📦</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Almacen</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Sistema de gestión de inventario y almacen con control de stock, categorías y reportes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Laravel</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vuexy</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Ecobasa Web -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">🏭</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Ecobasa Web</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Sistema de gestión industrial con control de máquinas, permisos de usuarios y automatización.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Laravel</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Black ID App -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">📱</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Black ID App</h3>
+                        <p class="text-muted mb-6 leading-relaxed">App híbrida para sistema de identificación y tarjetas digitales con QR y NFC.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Ionic</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Angular</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Capacitor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: iocheck / Amiqro -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">✅</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">iocheck / Amiqro</h3>
+                        <p class="text-muted mb-6 leading-relaxed">App de verificación y check-in con múltiples plugins: cámara, GPS, SQLite, QR y speech recognition.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Ionic</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Angular</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Reloj -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift border-t-4 border-primary transition-all">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-3xl mb-6">⏰</div>
+                        <h3 class="text-xl font-bold text-primary font-serif mb-3">Reloj</h3>
+                        <p class="text-muted mb-6 leading-relaxed">Aplicación de gestión de tiempo y control horario con reloj checador y reportes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Node.js</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Prisma</span>
+                            <span class="px-3 py-1 bg-primary text-white rounded text-xs font-semibold">Vue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-card">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary font-serif text-center mb-12 uppercase tracking-wider relative">
+                Habilidades y Tecnologías
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4 rounded"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Left Column -->
+                <div>
+                    <h3 class="text-xl font-bold text-primary font-serif mb-6 border-b-2 border-border pb-3">Backend</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Laravel</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">PHP</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Node.js</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">MySQL</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-primary font-serif mb-6 border-b-2 border-border pb-3">Frontend</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Vue.js</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Angular</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">TypeScript</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Vite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <h3 class="text-xl font-bold text-primary font-serif mb-6 border-b-2 border-border pb-3">Infraestructura & DevOps</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Nginx</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-background rounded-xl border border-border hover:border-accent transition-all hover-lift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="w-12 h-12 mb-2">
+                            <span class="text-sm font-semibold">Linux</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-primary font-serif mb-6 border-b-2 border-border pb-3">Especialidades</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">Ionic + Capacitor</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">Vuetify 3</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">OpenPay & Twilio</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">OpenRouter AI</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">SQLite</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">QR Codes</span>
+                        <span class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">GitHub Actions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold font-serif text-center mb-12 uppercase tracking-wider relative">
+                Contacto
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4 rounded"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Contact Info -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <h3 class="text-xl font-semibold mb-6">Información de Contacto</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <span class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-lg">📍</span>
+                            <span>Ciudad de México, MX</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-lg">✉️</span>
+                            <a href="mailto:eric.zubin@gmail.com" class="hover:text-accent-light transition-colors">eric.zubin@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-xl overflow-hidden shadow-2xl h-80">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240827.19000980142!2d-99.28094397801905!3d19.39067996549292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee342!2sMexico%20City%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2sus!4v1700592836130!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background py-8 border-t border-border">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-muted text-sm">
+                © 2024 Eric Zubin Vega Rodríguez. Todos los derechos reservados.
+            </p>
+            <p class="text-muted text-xs mt-2">
+                Desarrollado con <span class="text-accent">❤</span> usando Tailwind CSS
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg hover:bg-accent transition-all flex items-center justify-center text-xl opacity-0 pointer-events-none z-50">
+        ↑
+    </button>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
+
+        // Back to top button visibility
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
     </script>
-<!-- skills -->
-<script type="text/javascript" src="js/numscroller-1.0.js"></script>
-
-</head>
-<body>
-<!-- banner -->
-<div class="header-top">
-	<div class="container">
-		<ul>
-			<li><a class="scroll" href="#about"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>Sobre mí</a></li>
-			<li><a class="scroll" href="#experience"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Experiencia</a></li>
-			<li><a class="scroll" href="#skills"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Habilidades</a></li>
-			<li><a class="scroll" href="#projects"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>Proyectos</a></li>
-			<li><a class="scroll" href="#emailme"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contacto</a></li>
-			<li><a href="javascript:window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Imprimir CV</a></li>
-			<!-- Eliminado el enlace a My Photo Modal ya que no se usa -->
-		</ul>
-	</div>
-</div>	
-<div class="header">
-	<div class="container">
-		<div class="col-md-8 header-left">
-			<div class="col-sm-5 pro-pic">
-				<img class="img-responsive" src="images/perfil.jpg" alt="Foto de Eric Zubin Vega Rodríguez"/>
-			</div>
-			<div class="col-sm-7 pro-text"> <!-- Ajustado col-sm-5 a col-sm-7 para dar más espacio al texto -->
-				<h1>Eric Zubin Vega Rodríguez</h1>
-				<p>Desarrollador Full-Stack y entusiasta de la eficiencia</p>
-				<p class="tagline">“Laravel, Ionic Angular y AWS al servicio de soluciones escalables”</p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 header-right ">
-			<ul class="list-left">
-				<li>Email:</li>
-				<li>Teléfono:</li> <!-- Cambiado Phone no a Teléfono -->
-				<li>Ubicación: </li> <!-- Cambiado Address a Ubicación -->
-			</ul>
-			<ul class="list-right">
-				<li><a href="mailto:eric.zubin@gmail.com">eric.zubin@gmail.com</a></li>
-				<li>Ciudad de México, MX</li>
-			</ul>
-			<div class="clearfix"></div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //banner -->
-<!-- about -->
-<div id="about" class="about">
-	<div class="container">
-		<h3 class="tittle">Sobre mí</h3>
-		<div class="row">
-			<div class="col-md-12 abt-para">
-				<div class="about-section">
-					<div class="about-intro">
-						<p class="lead">Desarrollador Full-Stack apasionado por crear soluciones tecnológicas eficientes y escalables. Especializado en el ecosistema PHP/Laravel para backend y aplicaciones híbridas con Ionic Angular para movilidad empresarial.</p>
-					</div>
-					
-					<div class="about-grid">
-						<div class="about-item">
-							<span class="icon">📍</span>
-							<div>
-								<strong>Ubicación</strong>
-								<p>Ciudad de México, México 🇲🇽</p>
-							</div>
-						</div>
-						<div class="about-item">
-							<span class="icon">💼</span>
-							<div>
-								<strong>Modalidad</strong>
-								<p>Trabajo individual, atención al detalle</p>
-							</div>
-						</div>
-						<div class="about-item">
-							<span class="icon">🌐</span>
-							<div>
-								<strong>Idiomas</strong>
-								<p>Español nativo · Inglés práctico</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="about-focus">
-						<h4>Enfoque Técnico</h4>
-						<div class="focus-tags">
-							<span class="tag">Backend Laravel + MySQL</span>
-							<span class="tag">Apps Ionic Angular + Capacitor</span>
-							<span class="tag">Infraestructura AWS</span>
-							<span class="tag">Integraciones SMS/Pagos</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-</div>
-<!-- about -->
-<!-- Experiencia Profesional -->
-<div id="experience" class="employment">
-	<div class="container">
-		<h3 class="tittle">Experiencia Profesional</h3>
-		<div class="timeline">
-			<div class="experience-entry">
-				<div class="exp-header">
-					<h4>Amiqro</h4>
-					<span class="exp-date">2022 - Presente</span>
-				</div>
-				<p class="exp-role">Desarrollador Full-Stack & DevOps</p>
-				<ul class="exp-details">
-					<li>Desarrollo de <strong>aplicaciones web</strong> con Laravel, Vue 3 y Vuetify para gestión empresarial</li>
-					<li>Desarrollo de <strong>apps híbridas</strong> con Ionic Angular y Capacitor para iOS y Android</li>
-					<li>Configuración y administración de servidores <strong>Linux</strong> con <strong>Nginx</strong></li>
-					<li>Implementación de cabeceras de seguridad (<strong>X-Frame-Options</strong>, <strong>CSP</strong>, <strong>HSTS</strong>) y certificados <strong>SSL</strong></li>
-					<li>Gestión de infraestructura en <strong>AWS</strong> (EC2, RDS, S3)</li>
-					<li>Despliegue y mantenimiento de aplicaciones con <strong>Docker</strong> y <strong>GitHub Actions</strong></li>
-					<li>Integraciones con APIs: <strong>Twilio</strong> (SMS), <strong>OpenPay</strong> (pagos), <strong>OpenRouter</strong> (IA)</li>
-					<li>Desarrollo de scripts <strong>ZPL</strong> para impresoras <strong>Zebra ZT411</strong> (RFID)</li>
-				</ul>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //Experiencia Profesional -->
-
-<!-- Proyectos Destacados -->
-<div id="projects" class="portfolio projects-section">
-	<div class="container">
-		<h3 class="tittle">Proyectos Destacados</h3>
-		<div class="row project-list">
-			<!-- Proyecto 1: Club de Industriales -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">🏛️</div>
-					<h4>Club de Industriales</h4>
-					<p class="project-description">Plataforma Vue 3 + Vuetify para gestión de club empresarial con dashboard avanzado, gráficos y gestión de usuarios.</p>
-					<div class="project-badges">
-						<span class="badge">Vue 3</span>
-						<span class="badge">Vuetify 3</span>
-						<span class="badge">Vite</span>
-						<span class="badge">Pinia</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 2: Quinielas Win -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">🎰</div>
-					<h4>Quinielas Win</h4>
-					<p class="project-description">Sistema de apuestas deportivas con generación de QR, envío de SMS con Twilio y pagos internacionales mediante OpenPay.</p>
-					<div class="project-badges">
-						<span class="badge">Laravel</span>
-						<span class="badge">Ionic</span>
-						<span class="badge">Twilio</span>
-						<span class="badge">OpenPay</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 3: 101 Eventos -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">🎫</div>
-					<h4>101 Eventos</h4>
-					<p class="project-description">Plataforma de ticketing con sistema de roles (admin/usuario), generación de QR y gestión de empresas.</p>
-					<div class="project-badges">
-						<span class="badge">Laravel</span>
-						<span class="badge">Vuexy</span>
-						<span class="badge">MySQL</span>
-						<span class="badge">Docker</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row project-list">
-			<!-- Proyecto 4: Black ID Link -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">🤖</div>
-					<h4>Black ID Link</h4>
-					<p class="project-description">Plataforma web con IA para ingestion de productos y catálogos. Usa OpenRouter API para procesamiento de documentos.</p>
-					<div class="project-badges">
-						<span class="badge">Laravel</span>
-						<span class="badge">Vuexy</span>
-						<span class="badge">OpenRouter AI</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 5: Almacen -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">📦</div>
-					<h4>Almacen</h4>
-					<p class="project-description">Sistema de gestión de inventario y almacen con control de stock, categorías y reportes.</p>
-					<div class="project-badges">
-						<span class="badge">Laravel</span>
-						<span class="badge">Vuexy</span>
-						<span class="badge">MySQL</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 6: Ecobasa Web -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">🏭</div>
-					<h4>Ecobasa Web</h4>
-					<p class="project-description">Sistema de gestión industrial con control de máquinas, permisos de usuarios y automatización.</p>
-					<div class="project-badges">
-						<span class="badge">Laravel</span>
-						<span class="badge">MySQL</span>
-						<span class="badge">Docker</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row project-list">
-			<!-- Proyecto 7: Black ID App -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">📱</div>
-					<h4>Black ID App</h4>
-					<p class="project-description">App híbrida para sistema de identificación y tarjetas digitales con QR y NFC.</p>
-					<div class="project-badges">
-						<span class="badge">Ionic</span>
-						<span class="badge">Angular</span>
-						<span class="badge">Capacitor</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 8: iocheck / Amiqro -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">✅</div>
-					<h4>iocheck / Amiqro</h4>
-					<p class="project-description">App de verificación y check-in con múltiples plugins: cámara, GPS, SQLite, QR y speech recognition.</p>
-					<div class="project-badges">
-						<span class="badge">Ionic</span>
-						<span class="badge">Angular</span>
-						<span class="badge">SQLite</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 9: Reloj -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">⏰</div>
-					<h4>Reloj</h4>
-					<p class="project-description">Aplicación de gestión de tiempo y control horario con打卡 (reloj checador) y reportes.</p>
-					<div class="project-badges">
-						<span class="badge">Node.js</span>
-						<span class="badge">Prisma</span>
-						<span class="badge">Vue</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //Proyectos Destacados -->
-<!-- Habilidades y Tecnologías -->
-<div id="skills" class="more skills-section">
-	<div class="container">
-		<h3 class="tittle">Habilidades y Tecnologías</h3>
-		<div class="row">
-			<div class="col-md-6 skills-col">
-				<h4>Backend</h4>
-				<div class="skill-icons">
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" title="Laravel">
-						<span>Laravel</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP">
-						<span>PHP</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-						<span>Node.js</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-						<span>MySQL</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
-						<span>PostgreSQL</span>
-					</div>
-				</div>
-
-				<h4>Frontend</h4>
-				<div class="skill-icons">
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js">
-						<span>Vue.js</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" title="Angular/Ionic">
-						<span>Angular</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
-						<span>TypeScript</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite" title="Vite">
-						<span>Vite</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 skills-col">
-				<h4>Infraestructura & DevOps</h4>
-				<div class="skill-icons">
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS">
-						<span>AWS</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker">
-						<span>Docker</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" title="Nginx">
-						<span>Nginx</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
-						<span>Linux</span>
-					</div>
-				</div>
-
-				<h4>Especialidades</h4>
-				<div class="specialty-tags">
-					<span class="spec-tag">Ionic + Capacitor</span>
-					<span class="spec-tag">Vuetify 3</span>
-					<span class="spec-tag">OpenPay & Twilio</span>
-					<span class="spec-tag">OpenRouter AI</span>
-					<span class="spec-tag">SQLite</span>
-					<span class="spec-tag">QR Codes</span>
-					<span class="spec-tag">GitHub Actions</span>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //Habilidades y Tecnologías -->
-<!-- contact -->
-<div id="emailme" class="contact">
-	<div class="container">
-		<h3 class="tittle">Contact</h3>
-		<div class="col-md-6 contact-left ">
-			<div class="horizontal-tab">
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="false">Contactacme</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active in" id="tab1">
-						<div class="contact-form">
-							<ul>
-								<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><span>Ciudad de México, MX</span></li>
-								<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:eric.zubin@gmail.com">eric.zubin@gmail.com</a></li>
-							</ul>
-							<!--
-							<form>
-								<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-								<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-								<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-								<input type="submit" value="Submit" >
-							</form>
-							-->
-
-						</div>
-					 
-					</div>
-			
-					
-				</div>
-            </div>
-		</div>
-		<div class="col-md-6 contact-right ">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240827.19000980142!2d-99.28094397801905!3d19.39067996549292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee342!2sMexico%20City%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2sus!4v1700592836130!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //contact -->
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-
-<!-- Eliminados los modales de portafolio (portafolio1 a portafolio8) ya que no se usan con el nuevo diseño de proyectos -->
-
-	<!--scrolling js-->
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/scripts.js"></script>
-	<!--//scrolling js-->
-	<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
-
 </body>
 </html>
