@@ -13,7 +13,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- //js -->
 <!-- fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -191,11 +191,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<p class="exp-role">Desarrollador Full-Stack & DevOps</p>
 				<ul class="exp-details">
-					<li>Configuración y administración de servidores <strong>Linux</strong> con <strong>Nginx</strong> para amiqro.net</li>
+					<li>Desarrollo de <strong>aplicaciones web</strong> con Laravel, Vue 3 y Vuetify para gestión empresarial</li>
+					<li>Desarrollo de <strong>apps híbridas</strong> con Ionic Angular y Capacitor para iOS y Android</li>
+					<li>Configuración y administración de servidores <strong>Linux</strong> con <strong>Nginx</strong></li>
 					<li>Implementación de cabeceras de seguridad (<strong>X-Frame-Options</strong>, <strong>CSP</strong>, <strong>HSTS</strong>) y certificados <strong>SSL</strong></li>
-					<li>Embebido de contenido vía <strong>iframe</strong> y optimización de performance web</li>
-					<li>Gestión de infraestructura en <strong>AWS</strong> (EC2, RDS)</li>
+					<li>Gestión de infraestructura en <strong>AWS</strong> (EC2, RDS, S3)</li>
 					<li>Despliegue y mantenimiento de aplicaciones con <strong>Docker</strong> y <strong>GitHub Actions</strong></li>
+					<li>Integraciones con APIs: <strong>Twilio</strong> (SMS), <strong>OpenPay</strong> (pagos), <strong>OpenRouter</strong> (IA)</li>
+					<li>Desarrollo de scripts <strong>ZPL</strong> para impresoras <strong>Zebra ZT411</strong> (RFID)</li>
 				</ul>
 			</div>
 		</div>
@@ -209,71 +212,127 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<h3 class="tittle">Proyectos Destacados</h3>
 		<div class="row project-list">
-			<!-- Proyecto 1: Quinielas Win -->
+			<!-- Proyecto 1: Club de Industriales -->
+			<div class="col-md-4 col-sm-6 project-item">
+				<div class="project-content">
+					<div class="project-icon">🏛️</div>
+					<h4>Club de Industriales</h4>
+					<p class="project-description">Plataforma Vue 3 + Vuetify para gestión de club empresarial con dashboard avanzado, gráficos y gestión de usuarios.</p>
+					<div class="project-badges">
+						<span class="badge">Vue 3</span>
+						<span class="badge">Vuetify 3</span>
+						<span class="badge">Vite</span>
+						<span class="badge">Pinia</span>
+					</div>
+				</div>
+			</div>
+			<!-- Proyecto 2: Quinielas Win -->
 			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
 					<div class="project-icon">🎰</div>
 					<h4>Quinielas Win</h4>
 					<p class="project-description">Sistema de apuestas deportivas con generación de QR, envío de SMS con Twilio y pagos internacionales mediante OpenPay.</p>
 					<div class="project-badges">
-						<span class="badge">Ionic</span>
-						<span class="badge">Angular</span>
 						<span class="badge">Laravel</span>
+						<span class="badge">Ionic</span>
 						<span class="badge">Twilio</span>
+						<span class="badge">OpenPay</span>
 					</div>
 				</div>
 			</div>
-			<!-- Proyecto 2: App Hikvision -->
-			<div class="col-md-4 col-sm-6 project-item">
-				<div class="project-content">
-					<div class="project-icon">📹</div>
-					<h4>App Hikvision</h4>
-					<p class="project-description">Cliente Android para videoporteros IP con streaming de video en tiempo real vía RTSP y compatibilidad con dispositivos Hikvision.</p>
-					<div class="project-badges">
-						<span class="badge">Kotlin</span>
-						<span class="badge">ExoPlayer</span>
-						<span class="badge">RTSP</span>
-					</div>
-				</div>
-			</div>
-			<!-- Proyecto 3: Eventos Laravel -->
+			<!-- Proyecto 3: 101 Eventos -->
 			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
 					<div class="project-icon">🎫</div>
-					<h4>Eventos Laravel</h4>
-					<p class="project-description">Plataforma de ticketing con sistema de roles (admin/usuario), pasarela de pagos flexible y gestión de eventos.</p>
+					<h4>101 Eventos</h4>
+					<p class="project-description">Plataforma de ticketing con sistema de roles (admin/usuario), generación de QR y gestión de empresas.</p>
 					<div class="project-badges">
 						<span class="badge">Laravel</span>
+						<span class="badge">Vuexy</span>
 						<span class="badge">MySQL</span>
-						<span class="badge">AWS RDS</span>
+						<span class="badge">Docker</span>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row project-list">
-			<!-- Proyecto 4: Impresión RFID ZT411 -->
+			<!-- Proyecto 4: Black ID Link -->
 			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
-					<div class="project-icon">🏷️</div>
-					<h4>Impresión RFID ZT411</h4>
-					<p class="project-description">Scripts ZPL para encoding y calibración de tags RFID. Automatización de impresión con impresoras Zebra ZT411.</p>
+					<div class="project-icon">🤖</div>
+					<h4>Black ID Link</h4>
+					<p class="project-description">Plataforma web con IA para ingestion de productos y catálogos. Usa OpenRouter API para procesamiento de documentos.</p>
 					<div class="project-badges">
-						<span class="badge">ZPL</span>
-						<span class="badge">Zebra SDK</span>
-						<span class="badge">RFID</span>
+						<span class="badge">Laravel</span>
+						<span class="badge">Vuexy</span>
+						<span class="badge">OpenRouter AI</span>
 					</div>
 				</div>
 			</div>
-			<!-- Proyecto 5: Amiqro -->
+			<!-- Proyecto 5: Almacen -->
 			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
-					<div class="project-icon">🖥️</div>
-					<h4>Amiqro</h4>
-					<p class="project-description">Soporte de infraestructura completa: servidores Linux, Nginx, seguridad web (headers), SSL y optimización de performance.</p>
+					<div class="project-icon">📦</div>
+					<h4>Almacen</h4>
+					<p class="project-description">Sistema de gestión de inventario y almacen con control de stock, categorías y reportes.</p>
 					<div class="project-badges">
-						<span class="badge">Linux</span>
-						<span class="badge">Nginx</span>
-						<span class="badge">AWS</span>
+						<span class="badge">Laravel</span>
+						<span class="badge">Vuexy</span>
+						<span class="badge">MySQL</span>
+					</div>
+				</div>
+			</div>
+			<!-- Proyecto 6: Ecobasa Web -->
+			<div class="col-md-4 col-sm-6 project-item">
+				<div class="project-content">
+					<div class="project-icon">🏭</div>
+					<h4>Ecobasa Web</h4>
+					<p class="project-description">Sistema de gestión industrial con control de máquinas, permisos de usuarios y automatización.</p>
+					<div class="project-badges">
+						<span class="badge">Laravel</span>
+						<span class="badge">MySQL</span>
+						<span class="badge">Docker</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row project-list">
+			<!-- Proyecto 7: Black ID App -->
+			<div class="col-md-4 col-sm-6 project-item">
+				<div class="project-content">
+					<div class="project-icon">📱</div>
+					<h4>Black ID App</h4>
+					<p class="project-description">App híbrida para sistema de identificación y tarjetas digitales con QR y NFC.</p>
+					<div class="project-badges">
+						<span class="badge">Ionic</span>
+						<span class="badge">Angular</span>
+						<span class="badge">Capacitor</span>
+					</div>
+				</div>
+			</div>
+			<!-- Proyecto 8: iocheck / Amiqro -->
+			<div class="col-md-4 col-sm-6 project-item">
+				<div class="project-content">
+					<div class="project-icon">✅</div>
+					<h4>iocheck / Amiqro</h4>
+					<p class="project-description">App de verificación y check-in con múltiples plugins: cámara, GPS, SQLite, QR y speech recognition.</p>
+					<div class="project-badges">
+						<span class="badge">Ionic</span>
+						<span class="badge">Angular</span>
+						<span class="badge">SQLite</span>
+					</div>
+				</div>
+			</div>
+			<!-- Proyecto 9: Reloj -->
+			<div class="col-md-4 col-sm-6 project-item">
+				<div class="project-content">
+					<div class="project-icon">⏰</div>
+					<h4>Reloj</h4>
+					<p class="project-description">Aplicación de gestión de tiempo y control horario con打卡 (reloj checador) y reportes.</p>
+					<div class="project-badges">
+						<span class="badge">Node.js</span>
+						<span class="badge">Prisma</span>
+						<span class="badge">Vue</span>
 					</div>
 				</div>
 			</div>
@@ -291,12 +350,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Backend</h4>
 				<div class="skill-icons">
 					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" title="Laravel">
+						<span>Laravel</span>
+					</div>
+					<div class="skill-item">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP">
 						<span>PHP</span>
 					</div>
 					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" title="Laravel">
-						<span>Laravel</span>
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+						<span>Node.js</span>
 					</div>
 					<div class="skill-item">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
@@ -304,8 +367,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 
-				<h4>Frontend & Móvil</h4>
+				<h4>Frontend</h4>
 				<div class="skill-icons">
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js">
+						<span>Vue.js</span>
+					</div>
 					<div class="skill-item">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" title="Angular/Ionic">
 						<span>Angular</span>
@@ -313,10 +380,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="skill-item">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
 						<span>TypeScript</span>
-					</div>
-					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
-						<span>Kotlin</span>
 					</div>
 				</div>
 			</div>
@@ -332,20 +395,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span>Docker</span>
 					</div>
 					<div class="skill-item">
-						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
-						<span>Linux</span>
-					</div>
-					<div class="skill-item">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" title="Nginx">
 						<span>Nginx</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
+						<span>Linux</span>
 					</div>
 				</div>
 
 				<h4>Especialidades</h4>
 				<div class="specialty-tags">
-					<span class="spec-tag">ZPL & Zebra ZT411</span>
-					<span class="spec-tag">RTSP / Hikvision</span>
+					<span class="spec-tag">Ionic + Capacitor</span>
+					<span class="spec-tag">Vuetify 3</span>
 					<span class="spec-tag">OpenPay & Twilio</span>
+					<span class="spec-tag">OpenRouter AI</span>
+					<span class="spec-tag">ZPL & Zebra</span>
 					<span class="spec-tag">GitHub Actions</span>
 				</div>
 			</div>
