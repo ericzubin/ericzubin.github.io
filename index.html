@@ -129,37 +129,75 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //banner -->
 <!-- about -->
-<div id="about" class="about"> <!-- ID "about" ya existe, correcto -->
+<div id="about" class="about">
 	<div class="container">
 		<h3 class="tittle">Sobre mí</h3>
 		<div class="row">
-			<div class="col-md-12 abt-para" style="text-align: left;">
-				<p><strong>Ubicación:</strong> Ciudad de México 🇲🇽</p>
-				<p><strong>Estilo:</strong> Prefiero trabajar de forma individual, afinando cada detalle.</p>
-				<p><strong>Enfoque:</strong></p>
-				<ul>
-					<li>Backend con Laravel y MySQL</li>
-					<li>Apps híbridas con Ionic Angular + Capacitor</li>
-				</ul>
-				<p><strong>Idiomas:</strong> Español nativo, inglés práctico.</p>
+			<div class="col-md-12 abt-para">
+				<div class="about-section">
+					<div class="about-intro">
+						<p class="lead">Desarrollador Full-Stack apasionado por crear soluciones tecnológicas eficientes y escalables. Especializado en el ecosistema PHP/Laravel para backend y aplicaciones híbridas con Ionic Angular para movilidad empresarial.</p>
+					</div>
+					
+					<div class="about-grid">
+						<div class="about-item">
+							<span class="icon">📍</span>
+							<div>
+								<strong>Ubicación</strong>
+								<p>Ciudad de México, México 🇲🇽</p>
+							</div>
+						</div>
+						<div class="about-item">
+							<span class="icon">💼</span>
+							<div>
+								<strong>Modalidad</strong>
+								<p>Trabajo individual, atención al detalle</p>
+							</div>
+						</div>
+						<div class="about-item">
+							<span class="icon">🌐</span>
+							<div>
+								<strong>Idiomas</strong>
+								<p>Español nativo · Inglés práctico</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="about-focus">
+						<h4>Enfoque Técnico</h4>
+						<div class="focus-tags">
+							<span class="tag">Backend Laravel + MySQL</span>
+							<span class="tag">Apps Ionic Angular + Capacitor</span>
+							<span class="tag">Infraestructura AWS</span>
+							<span class="tag">Integraciones SMS/Pagos</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- La sección de education y las gráficas de pie se eliminan según el plan -->
 	<div class="clearfix"></div>
 </div>
 <!-- about -->
 <!-- Experiencia Profesional -->
-<div id="experience" class="employment"> <!-- Añadido ID para navegación -->
+<div id="experience" class="employment">
 	<div class="container">
 		<h3 class="tittle">Experiencia Profesional</h3>
-		<div class="col-md-12 experience-entry">
-			<h4>Amiqro</h4>
-			<ul>
-				<li>Configuración de servidores Linux y Nginx para amiqro.net</li>
-				<li>Ajuste de cabeceras de seguridad (X-Frame-Options, CSP) y SSL</li>
-				<li>Embebido de contenido vía iframe y optimización de performance</li>
-			</ul>
+		<div class="timeline">
+			<div class="experience-entry">
+				<div class="exp-header">
+					<h4>Amiqro</h4>
+					<span class="exp-date">2022 - Presente</span>
+				</div>
+				<p class="exp-role">Desarrollador Full-Stack & DevOps</p>
+				<ul class="exp-details">
+					<li>Configuración y administración de servidores <strong>Linux</strong> con <strong>Nginx</strong> para amiqro.net</li>
+					<li>Implementación de cabeceras de seguridad (<strong>X-Frame-Options</strong>, <strong>CSP</strong>, <strong>HSTS</strong>) y certificados <strong>SSL</strong></li>
+					<li>Embebido de contenido vía <strong>iframe</strong> y optimización de performance web</li>
+					<li>Gestión de infraestructura en <strong>AWS</strong> (EC2, RDS)</li>
+					<li>Despliegue y mantenimiento de aplicaciones con <strong>Docker</strong> y <strong>GitHub Actions</strong></li>
+				</ul>
+			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -167,54 +205,77 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //Experiencia Profesional -->
 
 <!-- Proyectos Destacados -->
-<div id="projects" class="portfolio projects-section"> <!-- Añadido ID para navegación -->
+<div id="projects" class="portfolio projects-section">
 	<div class="container">
 		<h3 class="tittle">Proyectos Destacados</h3>
 		<div class="row project-list">
 			<!-- Proyecto 1: Quinielas Win -->
-			<div class="col-md-4 project-item">
+			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
+					<div class="project-icon">🎰</div>
 					<h4>Quinielas Win</h4>
-					<p class="project-description">Sistema de apuestas con QR, SMS y pagos internacionales (OpenPay).</p>
-					<p class="project-stack"><strong>Stack:</strong> Ionic Angular, Laravel, Twilio</p>
+					<p class="project-description">Sistema de apuestas deportivas con generación de QR, envío de SMS con Twilio y pagos internacionales mediante OpenPay.</p>
+					<div class="project-badges">
+						<span class="badge">Ionic</span>
+						<span class="badge">Angular</span>
+						<span class="badge">Laravel</span>
+						<span class="badge">Twilio</span>
+					</div>
 				</div>
 			</div>
 			<!-- Proyecto 2: App Hikvision -->
-			<div class="col-md-4 project-item">
+			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
+					<div class="project-icon">📹</div>
 					<h4>App Hikvision</h4>
-					<p class="project-description">Cliente Android para videoporteros IP vía RTSP.</p>
-					<p class="project-stack"><strong>Stack:</strong> Kotlin, ExoPlayer</p>
+					<p class="project-description">Cliente Android para videoporteros IP con streaming de video en tiempo real vía RTSP y compatibilidad con dispositivos Hikvision.</p>
+					<div class="project-badges">
+						<span class="badge">Kotlin</span>
+						<span class="badge">ExoPlayer</span>
+						<span class="badge">RTSP</span>
+					</div>
 				</div>
 			</div>
 			<!-- Proyecto 3: Eventos Laravel -->
-			<div class="col-md-4 project-item">
+			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
+					<div class="project-icon">🎫</div>
 					<h4>Eventos Laravel</h4>
-					<p class="project-description">Plataforma de ticketing con roles y pagos flexibles.</p>
-					<p class="project-stack"><strong>Stack:</strong> Laravel, MySQL, Amazon RDS</p>
+					<p class="project-description">Plataforma de ticketing con sistema de roles (admin/usuario), pasarela de pagos flexible y gestión de eventos.</p>
+					<div class="project-badges">
+						<span class="badge">Laravel</span>
+						<span class="badge">MySQL</span>
+						<span class="badge">AWS RDS</span>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row project-list">
 			<!-- Proyecto 4: Impresión RFID ZT411 -->
-			<div class="col-md-4 project-item">
+			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
+					<div class="project-icon">🏷️</div>
 					<h4>Impresión RFID ZT411</h4>
-					<p class="project-description">Scripts ZPL para encoding y calibración de tags.</p>
-					<p class="project-stack"><strong>Stack:</strong> ZPL, Zebra SDK</p>
+					<p class="project-description">Scripts ZPL para encoding y calibración de tags RFID. Automatización de impresión con impresoras Zebra ZT411.</p>
+					<div class="project-badges">
+						<span class="badge">ZPL</span>
+						<span class="badge">Zebra SDK</span>
+						<span class="badge">RFID</span>
+					</div>
 				</div>
 			</div>
 			<!-- Proyecto 5: Amiqro -->
-			<div class="col-md-4 project-item">
+			<div class="col-md-4 col-sm-6 project-item">
 				<div class="project-content">
+					<div class="project-icon">🖥️</div>
 					<h4>Amiqro</h4>
-					<p class="project-description">Soporte de infraestructura, Nginx, seguridad web y optimización para amiqro.net.</p>
-					<p class="project-stack"><strong>Stack:</strong> Linux, Nginx, Security Headers</p>
+					<p class="project-description">Soporte de infraestructura completa: servidores Linux, Nginx, seguridad web (headers), SSL y optimización de performance.</p>
+					<div class="project-badges">
+						<span class="badge">Linux</span>
+						<span class="badge">Nginx</span>
+						<span class="badge">AWS</span>
+					</div>
 				</div>
-			</div>
-			<!-- Placeholder para mantener el diseño si son 5 proyectos -->
-			<div class="col-md-4 project-item-placeholder">
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -222,42 +283,71 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //Proyectos Destacados -->
 <!-- Habilidades y Tecnologías -->
-<div id="skills" class="more skills-section"> <!-- Añadido ID para navegación -->
+<div id="skills" class="more skills-section">
 	<div class="container">
 		<h3 class="tittle">Habilidades y Tecnologías</h3>
 		<div class="row">
 			<div class="col-md-6 skills-col">
-				<h4>Lenguajes</h4>
-				<ul>
-					<li>PHP</li>
-					<li>JavaScript/TypeScript</li>
-					<li>Kotlin</li>
-				</ul>
+				<h4>Backend</h4>
+				<div class="skill-icons">
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" title="PHP">
+						<span>PHP</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" title="Laravel">
+						<span>Laravel</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+						<span>MySQL</span>
+					</div>
+				</div>
 
-				<h4>Frameworks / Librerías</h4>
-				<h5>Backend:</h5>
-				<ul>
-					<li>Laravel</li>
-					<li>Composer</li>
-				</ul>
-				<h5>Frontend móvil:</h5>
-				<ul>
-					<li>Ionic Angular (+ Capacitor)</li>
-				</ul>
+				<h4>Frontend & Móvil</h4>
+				<div class="skill-icons">
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" title="Angular/Ionic">
+						<span>Angular</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+						<span>TypeScript</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+						<span>Kotlin</span>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6 skills-col">
-				<h4>Infraestructura</h4>
-				<ul>
-					<li>AWS (RDS, EC2)</li>
-					<li>Docker</li>
-					<li>CI/CD (GitHub Actions)</li>
-				</ul>
+				<h4>Infraestructura & DevOps</h4>
+				<div class="skill-icons">
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS">
+						<span>AWS</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker">
+						<span>Docker</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux">
+						<span>Linux</span>
+					</div>
+					<div class="skill-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" title="Nginx">
+						<span>Nginx</span>
+					</div>
+				</div>
 
 				<h4>Especialidades</h4>
-				<ul>
-					<li>ZPL y Zebra ZT411 (impresión y RFID)</li>
-					<li>RTSP para Hikvision</li>
-				</ul>
+				<div class="specialty-tags">
+					<span class="spec-tag">ZPL & Zebra ZT411</span>
+					<span class="spec-tag">RTSP / Hikvision</span>
+					<span class="spec-tag">OpenPay & Twilio</span>
+					<span class="spec-tag">GitHub Actions</span>
+				</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
