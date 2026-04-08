@@ -7,24 +7,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 /* Define root variables para colores y tipografía */
 :root {
-    --color-background: #f8f9fa; /* Gris muy suave */
-    --color-main: #2C7A7B;       /* Azul/teal principal */
-    --color-secondary: #2D3748;  /* Gris oscuro para texto */
-    --color-accent: #285E61;     /* Azul más intenso para hover/detalles */
-    --color-success: #38A169;    /* Verde suave para detalles opcionales */
-    --color-text-light: #ffffff; /* Para texto sobre fondos oscuros */
-    --color-border: #e0e0e0;     /* Para bordes sutiles */
-    --color-card-bg: #ffffff;    /* Fondo para tarjetas */
+    --color-background: #f0f4f8;
+    --color-main: #0891b2;
+    --color-secondary: #1e293b;
+    --color-accent: #0e7490;
+    --color-success: #10b981;
+    --color-text-light: #ffffff;
+    --color-border: #e2e8f0;
+    --color-card-bg: #ffffff;
+    --color-gradient-start: #0891b2;
+    --color-gradient-end: #6366f1;
 
     --font-sans-serif: 'Poppins', 'Inter', sans-serif;
     --font-monospace: 'Fira Code', monospace;
 
     --h1-size: 2.5rem;
     --h2-size: 2rem;
-    --h3-size: 1.75rem; /* Ajustado para títulos de sección como .tittle */
+    --h3-size: 1.75rem;
     --h4-size: 1.5rem;
     --h5-size: 1.25rem;
     --text-size: 1rem;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
 }
 
 html, body{
@@ -132,8 +140,9 @@ body a:hover {
 /*-- //to-top --*/
 /*-- resume --*/
 .header-top{
-	background: var(--color-main); /* Aplicando color principal */
-	padding:15px 0; /* Ajuste ligero de padding */
+	background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+	padding:15px 0;
+	box-shadow: var(--shadow-md);
 }
 .header-top ul li a {
     color: var(--color-text-light); /* Texto claro sobre fondo oscuro */
@@ -150,16 +159,21 @@ body a:hover {
     margin-right: 40px;
 }
 .header {
-    /* Considerar un degradado sutil o un color sólido si la imagen no encaja con la nueva paleta */
-    /* background: linear-gradient(to right, var(--color-main), var(--color-accent)); */
-    background: url(../images/pic2.jpg) no-repeat center; /* Manteniendo imagen por ahora, pero revisar legibilidad */
+    background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
     background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    -moz-background-size: cover;
-    padding: 40px 0; /* Aumentar padding para más aire */
-    border-bottom: 5px solid var(--color-main); /* Borde con color principal */
+    padding: 60px 0;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.9) 0%, rgba(99, 102, 241, 0.9) 100%);
+    z-index: 0;
 }
 .header-left {
     padding: 0;
@@ -229,11 +243,37 @@ ul.list-left li {
     border-bottom: 5px solid var(--color-border); /* Usar variable para borde */
 }
 h3.tittle {
-    /* font-size: 40px; */ /* Ya se define en h3 general */
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 40px; /* Un poco más de margen */
-    color: var(--color-main); /* Títulos de sección con color principal */
+    margin-bottom: 50px;
+    color: var(--color-secondary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+h3.tittle:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+p.abt-para {
+    color: var(--color-secondary);
+    line-height: 1.8em;
+    font-size: 15px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+p.abt-para strong {
+    color: var(--color-main);
+    font-weight: 600;
 }
 p.abt-para {
     color: var(--color-secondary); /* Usar variable para texto */
@@ -295,7 +335,7 @@ h3.tittle:after, h3.tittle:before {
 /*-- employment --*/
 .employment{
 	padding:90px 0;
-    border-bottom: 5px solid var(--color-border);
+    background-color: var(--color-background);
 }
 
 .employment .tittle {
@@ -344,7 +384,7 @@ h3.tittle:after, h3.tittle:before {
 /*-- Proyectos Destacados --*/
 .projects-section {
     padding: 90px 0;
-    border-bottom: 5px solid var(--color-border);
+    background-color: var(--color-background);
 }
 
 .projects-section .tittle {
@@ -365,27 +405,31 @@ h3.tittle:after, h3.tittle:before {
 }
 
 .project-content {
-    background-color: var(--color-card-bg); /* Usar variable para fondo de tarjeta */
-    padding: 25px; /* Más padding */
-    border: 1px solid var(--color-border);
-    border-radius: 6px; /* Un poco más redondeado */
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border: none;
+    border-radius: var(--radius-lg);
     height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil */
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-content h4 {
-    /* font-size: var(--h4-size); */ /* Ajustar si es necesario, o usar h5-size (1.25rem) */
-    font-size: 1.35rem; /* Tamaño intermedio */
+    font-size: 1.35rem;
     color: var(--color-main);
     margin-top: 0;
-    margin-bottom: 10px;
-	font-family: var(--font-sans-serif);
+    margin-bottom: 12px;
+    font-family: var(--font-sans-serif);
 }
 
 .project-description {
-    /* font-size: var(--text-size); */
     color: var(--color-secondary);
     line-height: 1.7em;
     margin-bottom: 15px;
@@ -393,14 +437,14 @@ h3.tittle:after, h3.tittle:before {
 }
 
 .project-stack {
-    /* font-size: var(--text-size); */
     color: var(--color-secondary);
     line-height: 1.6em;
+    font-size: 0.9rem;
 }
 
 .project-stack strong {
-    color: var(--color-accent); /* Usar accent para destacar el "Stack:" */
-    font-weight: 500;
+    color: var(--color-accent);
+    font-weight: 600;
 }
 
 /*-- //Proyectos Destacados --*/
@@ -408,7 +452,7 @@ h3.tittle:after, h3.tittle:before {
 /*-- Habilidades y Tecnologías --*/
 .skills-section {
     padding: 90px 0;
-    border-bottom: 5px solid var(--color-border);
+    background-color: #ffffff;
 }
 
 .skills-section .tittle {
@@ -457,28 +501,32 @@ h3.tittle:after, h3.tittle:before {
 }
 
 .skills-col ul li:before {
-    content: "•";
-    color: var(--color-main);
-    font-size: 20px;
+    content: "✓";
+    color: var(--color-success);
+    font-size: 14px;
+    font-weight: bold;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 /*-- //Habilidades y Tecnologías --*/
 
 /*-- contact --*/
 .contact {
-    background: var(--color-secondary); /* Fondo oscuro para contraste */
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #0f172a 100%);
     padding: 90px 0;
-    color: var(--color-text-light); /* Texto claro por defecto en esta sección */
+    color: var(--color-text-light);
 }
 
 .contact .tittle {
-    color: var(--color-text-light); /* Título claro */
+    color: var(--color-text-light);
 }
-.contact .tittle:after, .contact .tittle:before {
-    border-color: rgba(255,255,255,0.3); /* Líneas del título más sutiles */
+.contact .tittle:after {
+    background: linear-gradient(90deg, var(--color-gradient-start), #818cf8);
 }
 
 
