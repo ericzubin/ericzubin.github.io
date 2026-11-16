@@ -1,62 +1,41 @@
-# Eric Zubin
+# ericzubin.github.io
 
-**Desarrollador Full-Stack · CIO en STRAT** | Laravel · Vue 3 · Ionic Angular · AWS
+> **Este repositorio ya no es el sitio principal.** Mi sitio vive ahora en **[ericzubin.mx](https://ericzubin.mx)**.
 
-> 🌐 Mi sitio vive ahora en **[ericzubin.mx](https://ericzubin.mx)** — portafolio, experiencia,
-> proyectos y contacto. Esta página de GitHub Pages solo avisa del cambio y redirige.
+## Qué pasó
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel">
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular">
-  <img src="https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue 3">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS">
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-</p>
+Reconstruí mi sitio como una **web estática** (HTML, CSS y JavaScript, sin WordPress): más rápida, accesible y sin dependencias de terceros. Este repositorio conserva únicamente una **página de transición** que:
 
-## 📍 Ubicación
-Querétaro, Querétaro, México 🇲🇽
+- declara `rel="canonical"` hacia `https://ericzubin.mx/`
+- redirige con `meta refresh` a los 10 segundos
+- incluye datos estructurados `schema.org/Person` (JSON-LD)
+- no carga fuentes, scripts ni imágenes de terceros
 
-## 🛠️ Tech Stack
+**La URL canónica y el contenido real están en [ericzubin.mx](https://ericzubin.mx).**
 
-### Backend
-- **PHP** con **Laravel** y **Composer**
-- **MySQL** / **PostgreSQL** / **SQLite** / **Prisma**
-- APIs RESTful
+## Qué hay aquí
 
-### Frontend & Móvil
-- **Vue 3** + **Vuetify**, **Angular** + **Ionic** + **Capacitor**
-- **TypeScript** / **JavaScript**
-- Apps híbridas para Android / iOS
+| Archivo | Descripción |
+|:--|:--|
+| `index.html` | Página de transición (autocontenida, sin dependencias externas) |
+| `favicon.svg` | Icono del sitio (monograma EZ) |
+| `README.md` | Este archivo |
 
-### Infraestructura
-- **AWS** (EC2, RDS) y **Google Cloud**
-- **Docker** + **GitHub Actions** (CI/CD)
-- **Nginx** y servidores Linux
-- Cabeceras de seguridad (**CSP**, **HSTS**, **X-Frame-Options**)
+Los directorios `css/`, `js/`, `fonts/`, `images/` y `video/` del sitio anterior (Bootstrap 3, ~52 MB) fueron eliminados: nada de eso lo usa ya la página de transición. El historial de Git los conserva.
 
-### Especialidades
-- Integraciones de pago (**OpenPay**) y SMS (**Twilio**)
-- **IA** aplicada con **OpenRouter AI**
-- **ZPL** e impresoras **Zebra** (encoding RFID)
-- Streaming **RTSP** para dispositivos **Hikvision**
+## Sobre mí
 
-## 📁 Proyectos Destacados
+**Eric Zubin** — Desarrollador Full-Stack · CIO en **STRAT**.
 
-| Proyecto | Descripción | Stack |
-|----------|-------------|-------|
-| Quinielas Win | Sistema de apuestas con QR, SMS y pagos internacionales | Ionic, Laravel, Twilio, OpenPay |
-| 101 Eventos | Plataforma de ticketing con roles, QR y reportes PDF | Laravel, Vuexy, MySQL, DomPDF |
-| Ecobasa Web | ERP industrial: cotizaciones, producción (SIPOC), inventario | Laravel, Vue, Bootstrap |
-| Black ID App | App conserje para hoteles: QR, chat, tickets y notificaciones | Ionic, Angular, Firebase, SQLite |
-| iocheck / Amiqro | Verificación y check-in con QR, GPS, voz y SQLite offline | Ionic, Angular, SQLite |
+Construyo plataformas web, apps móviles e infraestructura en la nube.
 
-## 📬 Contacto
+**Stack:** Laravel · Vue 3 · Angular · Ionic · React Native / Expo · Node.js · TypeScript · MySQL · PostgreSQL · SQLite · AWS · Docker · Nginx · GitHub Actions · Twilio · OpenPay · Facturapi · OpenRouter AI · Firebase · Capacitor · ZPL/Zebra · Prisma
 
-- 📧 **Email:** [eric.zubin@gmail.com](mailto:eric.zubin@gmail.com)
-- 🌐 **Web:** [ericzubin.mx](https://ericzubin.mx)
+**Ubicación:** Querétaro, Querétaro, México · [eric.zubin@gmail.com](mailto:eric.zubin@gmail.com)
+
+## Enlaces
+
+- 🌐 **Sitio principal:** [ericzubin.mx](https://ericzubin.mx)
+- 📁 **30 proyectos:** [ericzubin.mx/proyectos](https://ericzubin.mx/proyectos/)
+- 💼 **Experiencia:** [ericzubin.mx/experiencia](https://ericzubin.mx/experiencia/)
 - 💻 **GitHub:** [github.com/ericzubin](https://github.com/ericzubin)
-
----
-
-_Página de GitHub Pages generada como aviso de migración; el contenido vivo está en ericzubin.mx._
